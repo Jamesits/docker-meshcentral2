@@ -16,7 +16,7 @@
     "compression": true,
     "webRTC": true,
     "nice404": true,
-    "clickOnce": false,
+    "clickOnce": true,
     "selfUpdate": false,
     "allowHighQualityDesktop": true,
     "desktopMultiplex": true,
