@@ -1,0 +1,19 @@
+version: '2.4'
+
+services:
+        meshcentral2: 
+                image: "jamesits/meshcentral2:latest"
+                build: "."
+                restart: "unless-stopped"
+                ulimits:
+                        nofile:
+                                soft: 800000
+                                hard: 1000000
+                volumes:
+                        - "./deploy/meshcentral-data:/srv/meshcentral2/meshcentral-data"
+                        - "./deploy/meshcentral-files:/srv/meshcentral2/meshcentral-files"
+                ports: 
+                        - "80:80"
+                        - "443:443"
+                        - "4433:4433"
+

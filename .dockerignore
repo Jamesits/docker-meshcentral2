@@ -1,3 +1,7 @@
+.git
 README.*
 LICENSE
 build.sh
+example
+deploy
+docker-compose.yml

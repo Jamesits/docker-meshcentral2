@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$1" == "node" ]]; then
-	# optional initialization
+	chown -R node:node .
 	
 	exec gosu node:node "$@"
 fi

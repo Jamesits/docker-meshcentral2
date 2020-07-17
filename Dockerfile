@@ -16,6 +16,7 @@ RUN npm install meshcentral@${MESHCENTRAL2_VERSION} \
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+EXPOSE 80 443 4433
 VOLUME [ "/srv/meshcentral2/meshcentral-data", "/srv/meshcentral2/meshcentral-files" ]
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
 CMD [ "node", "./node_modules/meshcentral" ]
