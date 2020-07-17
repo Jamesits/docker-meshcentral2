@@ -1,16 +1,27 @@
 {
   "$schema": "http://info.meshcentral.com/downloads/meshcentral-config-schema.json",
-  "__comment1__": "This is a simple configuration file, all values and sections that start with underscore (_) are ignored. Edit a section and remove the _ in front of the name. Refer to the user's guide for details.",
-  "__comment2__": "See node_modules/meshcentral/sample-config-advanced.json for a more advanced example.",
   "settings": {
-    "_cert": "myserver.mydomain.com",
-    "_WANonly": true,
-    "_LANonly": true,
+    "WANonly": false,
+    "LANonly": false,
     "_sessionKey": "MyReallySecretPassword1",
-    "_port": 443,
-    "_aliasPort": 443,
-    "_redirPort": 80,
-    "_redirAliasPort": 80
+    "port": 443,
+    "aliasPort": 443,
+    "redirPort": 80,
+    "redirAliasPort": 80,
+    "mongoDb": "mongodb://meshcentral:hunter2@mongo:27017/meshcentral",
+    "mongoDumpPath": "/usr/bin/mongodump",
+    "allowLoginToken": true,
+    "allowFraming": false,
+    "cookieIpCheck": false,
+    "compression": true,
+    "webRTC": true,
+    "nice404": true,
+    "clickOnce": false,
+    "selfUpdate": false,
+    "allowHighQualityDesktop": true,
+    "desktopMultiplex": true,
+    "no2FactorAuth": false,
+    "watchDog": { "interval": 100, "timeout": 400}
   },
   "domains": {
     "": {
@@ -28,3 +39,4 @@
     "production": false
   }
 }
+

@@ -16,4 +16,18 @@ services:
                         - "80:80"
                         - "443:443"
                         - "4433:4433"
+        mongo:
+                image: "mongo:4"
+                command: "--serviceExecutor adaptive"
+                restart: "unless-stopped"
+                volumes:
+                        - "./deploy/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
+                        - "./deploy/mongodb-data:/data/db"
+                        - "./deploy/mongodb-config:/data/configdb"
+                environment:
+                        - "MONGO_INITDB_DATABASE=meshcentral"
+                        - "MONGO_NON_ROOT_USERNAME=meshcentral"
+                        - "MONGO_NON_ROOT_PASSWORD=hunter2"
+                        - "MONGO_INITDB_ROOT_USERNAME=root"
+                        - "MONGO_INITDB_ROOT_PASSWORD=hunter2"
 

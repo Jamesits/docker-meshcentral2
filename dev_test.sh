@@ -6,7 +6,7 @@ function dc() {
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
-mkdir -p dev
+mkdir -p deploy
 cp -r example/* deploy/
 
 dc rm -f -v

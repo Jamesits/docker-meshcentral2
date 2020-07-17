@@ -1,15 +1,18 @@
 FROM node:lts-slim
 
+COPY etc /etc/
+
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y \
-	&& apt-get install -y libcap2-bin gosu \
+	&& apt-get install -y libcap2-bin gosu mongodb-org-tools \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& setcap cap_net_bind_service=+ep /usr/local/bin/node
 
 WORKDIR /srv/meshcentral2
 
 ARG MESHCENTRAL2_VERSION="0.5.81"
-RUN npm install meshcentral@${MESHCENTRAL2_VERSION} \
+RUN npm install --save meshcentral@${MESHCENTRAL2_VERSION} \
+	&& npm install --no-optional --save archiver mongodb saslprep otplib@10.2.3 image-size \
 	&& mkdir meshcentral-data meshcentral-files \
 	&& chown -R node:node .
 
