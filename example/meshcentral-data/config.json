@@ -21,7 +21,8 @@
     "allowHighQualityDesktop": true,
     "desktopMultiplex": true,
     "no2FactorAuth": false,
-    "watchDog": { "interval": 100, "timeout": 400}
+    "watchDog": { "interval": 100, "timeout": 400 },
+    "autoBackup": { "backupIntervalHours": 24, "keepLastDaysBackup": 10, "zipPassword": "supers3cret", "backupPath": "/srv/meshcentral2/backup" }
   },
   "domains": {
     "": {

@@ -12,6 +12,7 @@ services:
                 volumes:
                         - "./deploy/meshcentral-data:/srv/meshcentral2/meshcentral-data"
                         - "./deploy/meshcentral-files:/srv/meshcentral2/meshcentral-files"
+                        - "./deploy/meshcentral-backup:/srv/meshcentral2/backup"
                 env_file:
                         - "./deploy/meshcentral.env"
                 ports: 
