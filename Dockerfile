@@ -11,7 +11,7 @@ RUN apt-get update -y \
 WORKDIR /srv/meshcentral2
 
 ARG NODE_ENV="production"
-ARG MESHCENTRAL2_VERSION="0.6.28"
+ARG MESHCENTRAL2_VERSION="0.6.62"
 RUN npm install --save meshcentral@${MESHCENTRAL2_VERSION} \
 	&& npm install --no-optional --save archiver mongodb saslprep otplib@10.2.3 image-size node-rdpjs-2 archiver-zip-encrypted passport passport-azure-oauth2 jwt-simple nodemailer \
 	&& mkdir meshcentral-data meshcentral-files \
