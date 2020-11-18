@@ -1,6 +1,7 @@
 FROM node:lts-slim
 
 COPY etc /etc/
+COPY usr /usr/
 
 ARG DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update -y \
