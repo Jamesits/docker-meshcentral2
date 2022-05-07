@@ -1,5 +1,7 @@
 # MeshCentral2 Docker Image
 
+[![Build Status](https://dev.azure.com/nekomimiswitch/General/_apis/build/status/docker-meshcentral2?branchName=master)](https://dev.azure.com/nekomimiswitch/General/_build/latest?definitionId=94&branchName=master)
+
 ## System Requirements
 
 * Memory: 300MiB
