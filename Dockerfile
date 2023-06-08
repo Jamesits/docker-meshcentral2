@@ -12,9 +12,9 @@ RUN apt-get update -y \
 WORKDIR /srv/meshcentral2
 
 ARG NODE_ENV="production"
-ARG MESHCENTRAL2_VERSION="1.1.0"
+ARG MESHCENTRAL2_VERSION="1.1.5"
 RUN npm install --save --include=optional meshcentral@${MESHCENTRAL2_VERSION} \
-	&& npm install --include=optional --save archiver-zip-encrypted image-size jwt-simple mongodb@4.9.1 mongodb@4.13.0 node-rdpjs-2 nodemailer otplib@10.2.3 passport passport-azure-oauth2 saslprep semver \
+	&& npm install --include=optional --save archiver-zip-encrypted image-size jwt-simple mongodb@4.9.1 mongodb@4.13.0 node-rdpjs-2 nodemailer otplib@10.2.3 passport@0.5.3 passport-saml passport-azure-oauth2 saslprep semver \
 	&& mkdir meshcentral-data meshcentral-files \
 	&& chown -R node:node .
 
