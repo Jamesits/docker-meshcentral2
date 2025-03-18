@@ -75,8 +75,8 @@ importers:
         specifier: 1.2.0
         version: 1.2.0
       mongodb:
-        specifier: 4.13.0
-        version: 4.13.0
+        specifier: 4.17.0
+        version: 4.17.0
       mongojs:
         specifier: 3.1.0
         version: 3.1.0
@@ -474,6 +474,9 @@ packages:
 
   '@js-sdsl/ordered-map@4.4.2':
     resolution: {integrity: sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==}
+
+  '@mongodb-js/saslprep@1.2.0':
+    resolution: {integrity: sha512-+ywrb0AqkfaYuhHs6LxKWgqbh3I72EpEgESCw37o+9qPx9WTCkgDm2B+eMrwehGtHBWHFU4GXvnSCNiFhhausg==}
 
   '@mysql/xdevapi@8.0.33':
     resolution: {integrity: sha512-SXy+1CMtTb6qyKo/vzj/krWU4Ui6PnEtkkUjwdLpVdxkt0noZdDMmoGUxtMsm+Y2l15tme1MVuYvxMK7RJVfEA==}
@@ -2900,8 +2903,8 @@ packages:
       snappy:
         optional: true
 
-  mongodb@4.13.0:
-    resolution: {integrity: sha512-+taZ/bV8d1pYuHL4U+gSwkhmDrwkWbH1l4aah4YpmpscMwgFBkufIKxgP/G7m87/NUuQzc2Z75ZTI7ZOyqZLbw==}
+  mongodb@4.17.0:
+    resolution: {integrity: sha512-LZGMIPjPfWEfhPJATk1s9IvVTD18tyfKdT/0blCMih5vGagk2SwA9wFAUPMdtJpTrhXmyfGgwAaMkvneX2bn2A==}
     engines: {node: '>=12.9.0'}
 
   mongojs@3.1.0:
@@ -5149,6 +5152,11 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@js-sdsl/ordered-map@4.4.2':
+    optional: true
+
+  '@mongodb-js/saslprep@1.2.0':
+    dependencies:
+      sparse-bitfield: 3.0.3
     optional: true
 
   '@mysql/xdevapi@8.0.33':
@@ -8182,14 +8190,14 @@ snapshots:
     optionalDependencies:
       saslprep: 1.0.3
 
-  mongodb@4.13.0:
+  mongodb@4.17.0:
     dependencies:
       bson: 4.7.2
       mongodb-connection-string-url: 2.6.0
       socks: 2.8.4
     optionalDependencies:
       '@aws-sdk/credential-providers': 3.768.0
-      saslprep: 1.0.3
+      '@mongodb-js/saslprep': 1.2.0
     transitivePeerDependencies:
       - aws-crt
 
@@ -9479,7 +9487,7 @@ snapshots:
   through2@3.0.2:
     dependencies:
       inherits: 2.0.4
-      readable-stream: 2.3.8
+      readable-stream: 3.6.2
 
   through2@4.0.2:
     dependencies:
