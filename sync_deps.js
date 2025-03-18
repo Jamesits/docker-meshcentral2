@@ -15,5 +15,5 @@ const file = fs.readFileSync(path.join(__dirname, './node_modules/.pnpm/meshcent
 const matches = file.matchAll(re);
 for (const match of matches) {
     console.log("> Adding " + match[1]);
-    execSync(`pnpm add ${match[1]}`);
+    execSync(`pnpm add ${match[1]}`, { stdio: 'inherit' });
 }
