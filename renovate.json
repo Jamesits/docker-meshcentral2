@@ -5,6 +5,7 @@
         "github>jamesits/.github//renovate/default",
         "github>jamesits/.github//renovate/group-monorepo"
     ],
+    "automerge": true,
     "packageRules": [
         {
             "matchCategories": ["js"],
