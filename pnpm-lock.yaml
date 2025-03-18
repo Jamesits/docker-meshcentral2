@@ -24,8 +24,8 @@ importers:
         specifier: 4.2.5
         version: 4.2.5
       aedes:
-        specifier: 0.39.0
-        version: 0.39.0
+        specifier: 0.42.1
+        version: 0.42.1
       archiver-zip-encrypted:
         specifier: 2.0.0
         version: 2.0.0
@@ -934,14 +934,21 @@ packages:
     resolution: {integrity: sha512-dtnck4sdZ2owFLTC73Ewjx0kmvsRjTRgaOc8UztCNODT+lr1DXj0tiuUXjeY4LAzZryXCtCib/E+KD8NYeP1aw==}
     engines: {node: '>= 10'}
 
-  aedes-packet@1.0.0:
-    resolution: {integrity: sha512-zGcB+O60jjgSo5dGZd9wnSfQWi0oqBFQDe9Br0vqWaSVtkOc0zkLg0xRKSppbly56J6q9EHSteHdrHjW90+h4A==}
+  aedes-packet@2.3.1:
+    resolution: {integrity: sha512-LqBd57uc2rui2RbjycW17dylglejG26mM4ewVXGNDnVp/SUHFVEgm7d1HTmYrnSkSCNoHti042qgcTwv/F+BtQ==}
+    engines: {node: '>=8'}
 
-  aedes-persistence@6.0.0:
-    resolution: {integrity: sha512-LVk80Mg6bCfQgbcyo16ipuFo5KdORVxtzFAMmaisE3Hkydwt5H9I02gmF5IPADF5zPk0RfYxumQ4IIV1+jEp7Q==}
+  aedes-persistence@8.1.3:
+    resolution: {integrity: sha512-VMCjEV+2g1TNJb/IlDEUy6SP9crT+QUhe2xc6UjyqrFNBNgTvHmOefXY7FxWrwmR2QA02vwg3+5p/JXkyg/Dkw==}
+    engines: {node: '>=10'}
 
-  aedes@0.39.0:
-    resolution: {integrity: sha512-AV7pN4Ogt4tNNgNNabKjsC7Cw7bMMNjQH1hua4zQV0TFf/QEBPVu1YDZMH3Lrrt2XziydQzmBrBc5aAQvAq5FQ==}
+  aedes-protocol-decoder@1.0.0:
+    resolution: {integrity: sha512-nzWwSetptIFFk0gXtXBvmBPUD6HwuZKeVm/8mRJqEKfBJ4ZnvgpcO5CFwEDzTi884jOWTIBaJAWll3QLYsOCFQ==}
+    engines: {node: '>=8'}
+
+  aedes@0.42.1:
+    resolution: {integrity: sha512-YlmgzE691UsTAugQ8SJVVpjv+Qc9m+TQJDvXCQ/bU3xnUohuGdaNWWt1u9KNLSbJhr+NDQPp10nuvq7UCTF7zQ==}
+    engines: {node: '>=10'}
 
   aes-js@3.1.2:
     resolution: {integrity: sha512-e5pEa2kBnBOgR4Y/p20pskXI74UEz7de8ZGVo58asOtvSVG5YAbJeELPZxOmt+Bnz3rX753YKhfIn4X4l1PPRQ==}
@@ -1860,8 +1867,8 @@ packages:
   fastparallel@2.4.1:
     resolution: {integrity: sha512-qUmhxPgNHmvRjZKBFUNI0oZuuH9OlSIOXmJ98lhKPxMZZ7zS/Fi0wRHOihDSz0R1YiIOjxzOY4bq65YTcdBi2Q==}
 
-  fastseries@1.7.2:
-    resolution: {integrity: sha512-dTPFrPGS8SNSzAt7u/CbMKCJ3s01N04s4JFbORHcmyvVfVKmbhMD1VtRbh5enGHxkaQDqWyLefiKOGGmohGDDQ==}
+  fastseries@2.0.0:
+    resolution: {integrity: sha512-XBU9RXeoYc2/VnvMhplAxEmZLfIk7cvTBu+xwoBuTI8pL19E03cmca17QQycKIdxgwCeFA/a4u27gv1h3ya5LQ==}
 
   faye-websocket@0.11.4:
     resolution: {integrity: sha512-CzbClwlXAuiRQAlUyfqPgvPoNKTckTPGfwZV4ZdAhVcP2lh9KUxJg2b5GkE7XbjKQ3YJnQ9z6D9ntLAlB+tP8g==}
@@ -1956,6 +1963,10 @@ packages:
   formdata-polyfill@4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
     engines: {node: '>=12.20.0'}
+
+  forwarded@0.1.2:
+    resolution: {integrity: sha512-Ua9xNhH0b8pwE3yRbFfXJvfdWF0UHNCdeyb2sbi9Ul/M+r3PTdrz7Cv4SCfZRMjmzEM9PhraqfZFbGTIg3OMyA==}
+    engines: {node: '>= 0.6'}
 
   forwarded@0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
@@ -2907,8 +2918,9 @@ packages:
   mongojs@3.1.0:
     resolution: {integrity: sha512-aXJ4xfXwx9s1cqtKTZ24PypXiWhIgvgENObQzCGbV4QBxEVedy3yuErhx6znk959cF2dOzL2ClgXJvIhfgkpIQ==}
 
-  mqemitter@3.0.0:
-    resolution: {integrity: sha512-1HduoiTFngBGFEKCGvfCpGfPM/3g58xtDW9fmuHpbnRieC01uAi3yJE/F1YsUrzH8p441l10kosYzi3HhJYnrQ==}
+  mqemitter@4.5.0:
+    resolution: {integrity: sha512-Mp/zytFeIv6piJQkEKnncHcP4R/ErJc5C7dfonkhkNUT2LA/nTayrfNxbipp3M5iCJUTQSUtzfQAQA3XVcKz6w==}
+    engines: {node: '>=10'}
 
   mqtt-packet@6.10.0:
     resolution: {integrity: sha512-ja8+mFKIHdB1Tpl6vac+sktqy3gA8t9Mduom1BA75cI+R9AHnZOiaBQwpGiWnaVJLDGRdNhQmFaAqd7tkKSMGA==}
@@ -3366,6 +3378,9 @@ packages:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
 
+  proxy-protocol-js@4.0.6:
+    resolution: {integrity: sha512-SjXgyBmr0dBbKUZ0jOzp0N9urTcDOI1cd1oEeE43W1vG4OMwYYLggCRcMJ0zv0gdTA8Imb4cAiYj8Ic/PWv1mw==}
+
   pseudomap@1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}
 
@@ -3379,9 +3394,9 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  qlobber@3.1.0:
-    resolution: {integrity: sha512-B7EU6Hv9g4BeJiB7qtOjn9wwgqVpcWE5c4/86O0Yoj7fmAvgwXrdG1E+QF13S/+TX5XGUl7toizP0gzXR2Saug==}
-    engines: {node: '>= 6'}
+  qlobber@5.0.3:
+    resolution: {integrity: sha512-wW4GTZPePyh0RgOsM18oDyOUlXfurVRgoNyJfS+y7VWPyd0GYhQp5T2tycZFZjonH+hngxIfklGJhTP/ghidgQ==}
+    engines: {node: '>= 8'}
 
   qs@0.6.6:
     resolution: {integrity: sha512-kN+yNdAf29Jgp+AYHUmC7X4QdJPR8czuMWLNLc0aRxkQ7tB3vJQEONKKT9ou/rW7EbqVec11srC9q9BiVbcnHA==}
@@ -3953,9 +3968,6 @@ packages:
   thirty-two@1.0.2:
     resolution: {integrity: sha512-OEI0IWCe+Dw46019YLl6V10Us5bi574EvlJEOcAkB29IzQ/mYD1A6RyNHLjZPiHCmuodxvgF6U+vZO1L15lxVA==}
     engines: {node: '>=0.2.6'}
-
-  through2@3.0.2:
-    resolution: {integrity: sha512-enaDQ4MUyP2W6ZyT6EsMzqBPZaM/avg8iuo+l2d3QCs0J+6RaqkHV/2/lOwDTueBHeJ/2LG9lrLW3d5rWPucuQ==}
 
   through2@4.0.2:
     resolution: {integrity: sha512-iOqSav00cVxEEICeD7TjLB1sueEL+81Wpzp2bY17uZjZN0pWZPuo4suZ/61VujxmqSGFfgOcNuTZ85QJwNZQpw==}
@@ -5829,32 +5841,43 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  aedes-packet@1.0.0: {}
-
-  aedes-persistence@6.0.0:
+  aedes-packet@2.3.1:
     dependencies:
-      aedes-packet: 1.0.0
+      mqtt-packet: 6.10.0
+    transitivePeerDependencies:
+      - supports-color
+
+  aedes-persistence@8.1.3:
+    dependencies:
+      aedes-packet: 2.3.1
       from2: 2.3.0
-      qlobber: 3.1.0
+      qlobber: 5.0.3
+    transitivePeerDependencies:
+      - supports-color
 
-  aedes@0.39.0:
+  aedes-protocol-decoder@1.0.0:
     dependencies:
-      aedes-packet: 1.0.0
-      aedes-persistence: 6.0.0
+      forwarded: 0.1.2
+      proxy-protocol-js: 4.0.6
+
+  aedes@0.42.1:
+    dependencies:
+      aedes-packet: 2.3.1
+      aedes-persistence: 8.1.3
+      aedes-protocol-decoder: 1.0.0
       bulk-write-stream: 2.0.1
       end-of-stream: 1.4.4
       fastfall: 1.5.1
       fastparallel: 2.4.1
-      fastseries: 1.7.2
-      from2: 2.3.0
-      mqemitter: 3.0.0
+      fastseries: 2.0.0
+      mqemitter: 4.5.0
       mqtt-packet: 6.10.0
-      pump: 3.0.2
+      proxy-protocol-js: 4.0.6
+      readable-stream: 3.6.2
       retimer: 2.0.0
       reusify: 1.1.0
       shortid: 2.2.17
-      through2: 3.0.2
-      uuid: 3.4.0
+      uuid: 8.3.2
     transitivePeerDependencies:
       - supports-color
 
@@ -6914,10 +6937,7 @@ snapshots:
       reusify: 1.1.0
       xtend: 4.0.2
 
-  fastseries@1.7.2:
-    dependencies:
-      reusify: 1.1.0
-      xtend: 4.0.2
+  fastseries@2.0.0: {}
 
   faye-websocket@0.11.4:
     dependencies:
@@ -7043,6 +7063,8 @@ snapshots:
   formdata-polyfill@4.0.10:
     dependencies:
       fetch-blob: 3.2.0
+
+  forwarded@0.1.2: {}
 
   forwarded@0.2.0: {}
 
@@ -8212,10 +8234,10 @@ snapshots:
       - snappy
       - supports-color
 
-  mqemitter@3.0.0:
+  mqemitter@4.5.0:
     dependencies:
       fastparallel: 2.4.1
-      qlobber: 3.1.0
+      qlobber: 5.0.3
 
   mqtt-packet@6.10.0:
     dependencies:
@@ -8728,6 +8750,8 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
+  proxy-protocol-js@4.0.6: {}
+
   pseudomap@1.0.2: {}
 
   psl@1.15.0:
@@ -8741,7 +8765,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  qlobber@3.1.0: {}
+  qlobber@5.0.3: {}
 
   qs@0.6.6: {}
 
@@ -9475,11 +9499,6 @@ snapshots:
   text-hex@1.0.0: {}
 
   thirty-two@1.0.2: {}
-
-  through2@3.0.2:
-    dependencies:
-      inherits: 2.0.4
-      readable-stream: 2.3.8
 
   through2@4.0.2:
     dependencies:

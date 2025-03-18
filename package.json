@@ -5,7 +5,7 @@
 		"@xmpp/client": "0.13.1",
 		"acebase": "1.29.5",
 		"acme-client": "4.2.5",
-		"aedes": "0.39.0",
+		"aedes": "0.42.1",
 		"archiver-zip-encrypted": "2.0.0",
 		"esprima": "4.0.1",
 		"firebase-admin": "12.7.0",
