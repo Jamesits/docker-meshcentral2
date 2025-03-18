@@ -11,7 +11,7 @@ RUN setcap 'cap_net_bind_service=+ep' "$(command -v node)"
 
 WORKDIR /srv/meshcentral2
 ENV NODE_ENV="production"
-COPY package.json pnpm-lock.yaml .
+COPY .npmrc package.json pnpm-lock.yaml .
 RUN corepack enable \
 	&& pnpm install --frozen-lockfile \
 	# https://github.com/Ylianst/MeshCentral/blob/0d346b1d62f600438a0df2f63ab6a3cca66fe7cd/docker/Dockerfile#L20
