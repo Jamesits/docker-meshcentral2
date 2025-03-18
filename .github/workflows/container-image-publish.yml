@@ -26,6 +26,7 @@ jobs:
         with:
           images: docker.io/jamesits/meshcentral2
           tags: |
+            type=edge,branch=master
             type=semver,pattern={{version}}
       - uses: docker/build-push-action@v6
         with:
