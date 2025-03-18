@@ -1,27 +1,27 @@
-FROM node:lts-slim
+FROM docker.io/library/node:22-bookworm-slim
 
-COPY etc /etc/
-COPY usr /usr/
-
-ARG DEBIAN_FRONTEND="noninteractive"
+# Install mongodb tools for online backup
+COPY --chown=0:0 rootfs_overrides/. /
+ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update -y \
-	&& apt-get install -y libcap2-bin gosu mongodb-org-tools \
-	&& rm -rf /var/lib/apt/lists/* \
-	&& setcap cap_net_bind_service=+ep /usr/local/bin/node
+	&& apt-get install -y libcap2-bin mongodb-org-tools \
+	&& rm -rf /var/lib/apt/lists/*
+
+RUN setcap 'cap_net_bind_service=+ep' "$(command -v node)"
 
 WORKDIR /srv/meshcentral2
-
-ARG NODE_ENV="production"
-ARG MESHCENTRAL2_VERSION="1.1.9"
-RUN npm install --save --include=optional meshcentral@${MESHCENTRAL2_VERSION} \
-	&& npm install --include=optional --save archiver-zip-encrypted image-size jwt-simple mongodb@4.9.1 mongodb@4.13.0 node-rdpjs-2 nodemailer otplib@10.2.3 passport@0.5.3 passport-saml passport-azure-oauth2 saslprep semver \
+ENV NODE_ENV="production"
+COPY package.json pnpm-lock.yaml .
+RUN corepack enable \
+	&& pnpm install --frozen-lockfile \
+	# https://github.com/Ylianst/MeshCentral/blob/0d346b1d62f600438a0df2f63ab6a3cca66fe7cd/docker/Dockerfile#L20
+	# I don't know WTF is this. It looks hacky to me.
+	&& (cd node_modules/meshcentral/translate && node translate.js extractall && node translate.js minifyall && node translate.js translateall) \
 	&& mkdir meshcentral-data meshcentral-files \
 	&& chown -R node:node .
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+USER node:node
 
 EXPOSE 80 443 4433
 VOLUME [ "/srv/meshcentral2/meshcentral-data", "/srv/meshcentral2/meshcentral-files" ]
-ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
 CMD [ "node", "./node_modules/meshcentral" ]

@@ -1,6 +1,8 @@
 # MeshCentral2 Docker Image
 
-[![Build Status](https://dev.azure.com/nekomimiswitch/General/_apis/build/status/docker-meshcentral2?branchName=master)](https://dev.azure.com/nekomimiswitch/General/_build/latest?definitionId=94&branchName=master)
+![Works - On My Machine](https://img.shields.io/badge/Works-On_My_Machine-2ea44f)
+![Project Status - Feature Complete](https://img.shields.io/badge/Project_Status-Feature_Complete-2ea44f)
+[![Docker Image Version](https://img.shields.io/docker/v/jamesits/meshcentral2?label=Docker%20Hub)](http://hub.docker.com/r/jamesits/meshcentral2)
 
 ## System Requirements
 
@@ -29,6 +31,13 @@ docker run --name=meshcentral2 \
 	-p 80:80 \
 	-p 443:443 \
 	-p 4443:4443 \
-	-it jamesits/meshcentral2:latest
+	-it docker.io/jamesits/meshcentral2:latest
 ```
 
+## Development
+
+### Upgrading
+
+Notes:
+- Upgrades should be auto-proposed by Mend Renovate
+- Always run `./sync_deps.js` since MeshCentral implements a package version check in its startup procedure

@@ -1,1 +1,3 @@
-deploy/
+/deploy/
+.pnpm-store
+/node_modules/
