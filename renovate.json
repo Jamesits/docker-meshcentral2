@@ -8,19 +8,16 @@
     "automerge": true,
     "packageRules": [
         {
-            "matchCategories": ["js"],
-            "matchPackageNames": ["!meshcentral"],
+            "matchCategories": [
+                "js"
+            ],
+            "matchPackageNames": [
+                "!meshcentral"
+            ],
             "enabled": false
         }
     ],
-    "postUpgradeTasks": {
-        "commands": [
-            "./sync_deps.js"
-        ],
-        "fileFilters": [
-            "package.json",
-            "pnpm-lock.yaml"
-        ],
-        "executionMode": "update"
+    "vulnerabilityAlerts": {
+        "enabled": false
     }
 }
