@@ -38,6 +38,11 @@ docker run --name=meshcentral2 \
 
 ### Upgrading
 
-Notes:
-- Upgrades should be auto-proposed by Mend Renovate
-- Always run `./sync_deps.js` since MeshCentral implements a package version check in its startup procedure
+Upgrades should be auto-proposed by Mend Renovate.
+
+Run:
+```shell
+pnpm install --frozen-lockfile
+./sync_deps.js
+```
+before merging.
