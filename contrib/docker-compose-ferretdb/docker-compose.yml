@@ -1,0 +1,33 @@
+services:
+  meshcentral2:
+    image: "docker.io/jamesits/meshcentral2:latest"
+    restart: "unless-stopped"
+    # ulimits:
+    #   nofile:
+    #     soft: 800000
+    #     hard: 1000000
+    volumes:
+      - "./deployment/meshcentral-data:/srv/meshcentral2/meshcentral-data"
+      - "./deployment/meshcentral-files:/srv/meshcentral2/meshcentral-files"
+      - "./deployment/meshcentral-backup:/srv/meshcentral2/backup"
+    env_file:
+      - "./deployment/meshcentral.env"
+    ports:
+      - "8080:80"
+      - "8443:443"
+      - "4433:4433"
+
+  postgres:
+    image: ghcr.io/ferretdb/postgres-documentdb:17-0.102.0-ferretdb-2.1.0
+    platform: linux/amd64
+    restart: "unless-stopped"
+    env_file:
+      - ./deployment/postgresql.env
+    volumes:
+      - ./deployment/postgresql:/var/lib/postgresql/data
+
+  mongo:
+    image: ghcr.io/ferretdb/ferretdb:2.1.0
+    restart: "unless-stopped"
+    env_file:
+      - ./deployment/ferretdb.env

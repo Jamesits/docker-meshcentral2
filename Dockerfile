@@ -23,5 +23,5 @@ RUN corepack enable \
 USER node:node
 
 EXPOSE 80 443 4433
-VOLUME [ "/srv/meshcentral2/meshcentral-data", "/srv/meshcentral2/meshcentral-files" ]
+VOLUME [ "/srv/meshcentral2/meshcentral-data", "/srv/meshcentral2/meshcentral-files", "/srv/meshcentral2/backup" ]
 CMD [ "node", "./node_modules/meshcentral" ]

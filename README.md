@@ -12,13 +12,19 @@
 
 ### Docker Compose
 
+Example with FerretDB or MongoDB has been provided.
+
 ```shell
-cp -r example deploy
+cd contrib/docker-compose-ferretdb
+cp -r example deployment
 
-# edit your MongoDB password and MeshCentral config now in deploy/
-
-docker-compose -f docker-compose.yml up -d
+# edit your passwords in deployment/*.env
+docker compose up -d
 ```
+
+Notes:
+
+- The FerretDB bundled DocumentDB can use database `postgres` only by default. If you want to use other database names, you need to edit the PostgreSQL configuration.
 
 ### Docker
 
@@ -41,8 +47,10 @@ docker run --name=meshcentral2 \
 Upgrades should be auto-proposed by Mend Renovate.
 
 Run:
+
 ```shell
 pnpm install --frozen-lockfile
 ./sync_deps.js
 ```
+
 before merging.
