@@ -2,10 +2,10 @@ services:
   meshcentral2:
     image: "docker.io/jamesits/meshcentral2:latest"
     restart: "unless-stopped"
-    # ulimits:
-    #   nofile:
-    #     soft: 800000
-    #     hard: 1000000
+    ulimits:
+      nofile:
+        soft: 800000
+        hard: 1000000
     volumes:
       - "./deployment/meshcentral-data:/srv/meshcentral2/meshcentral-data"
       - "./deployment/meshcentral-files:/srv/meshcentral2/meshcentral-files"
@@ -13,8 +13,8 @@ services:
     env_file:
       - "./deployment/meshcentral.env"
     ports:
-      - "8080:80"
-      - "8443:443"
+      - "80:80"
+      - "443:443"
       - "4433:4433"
 
   postgres:
