@@ -16,3 +16,5 @@ jobs:
         with:
           context: .
           push: false
+          cache-from: type=registry,ref=docker.io/jamesits/meshcentral2:github-actions-cache
+          cache-to: type=registry,ref=docker.io/jamesits/meshcentral2:github-actions-cache,mode=max,compression=zstd
