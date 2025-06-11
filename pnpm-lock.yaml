@@ -87,8 +87,8 @@ importers:
         specifier: 7.0.2
         version: 7.0.2
       image-size:
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 2.0.2
+        version: 2.0.2
       input:
         specifier: 1.0.1
         version: 1.0.1
@@ -123,8 +123,8 @@ importers:
         specifier: 1.2.0
         version: 1.2.0
       mongodb:
-        specifier: 4.13.0
-        version: 4.13.0
+        specifier: 4.17.2
+        version: 4.17.2
       mongojs:
         specifier: 3.1.0
         version: 3.1.0
@@ -603,6 +603,9 @@ packages:
 
   '@js-sdsl/ordered-map@4.4.2':
     resolution: {integrity: sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==}
+
+  '@mongodb-js/saslprep@1.2.2':
+    resolution: {integrity: sha512-EB0O3SCSNRUFk66iRCpI+cXzIjdswfCs7F6nOC3RAGJ7xr5YhaicvsRwJ9eyzYvYRlCSDUO/c7g4yNulxKC1WA==}
 
   '@mysql/xdevapi@8.0.33':
     resolution: {integrity: sha512-SXy+1CMtTb6qyKo/vzj/krWU4Ui6PnEtkkUjwdLpVdxkt0noZdDMmoGUxtMsm+Y2l15tme1MVuYvxMK7RJVfEA==}
@@ -2480,8 +2483,8 @@ packages:
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
-  image-size@1.1.1:
-    resolution: {integrity: sha512-541xKlUw6jr/6gGuk92F+mYM5zaFAc5ahphvkqvNe2bQ6gVBkd6bfrmVJ2t4KDAfikAYZyIqTnktX3i6/aQDrQ==}
+  image-size@2.0.2:
+    resolution: {integrity: sha512-IRqXKlaXwgSMAMtpNzZa1ZAe8m+Sa1770Dhk8VkSsP9LS+iHD62Zd8FQKs8fbPiagBE7BzoFX23cxFnwshpV6w==}
     engines: {node: '>=16.x'}
     hasBin: true
 
@@ -3126,8 +3129,8 @@ packages:
       snappy:
         optional: true
 
-  mongodb@4.13.0:
-    resolution: {integrity: sha512-+taZ/bV8d1pYuHL4U+gSwkhmDrwkWbH1l4aah4YpmpscMwgFBkufIKxgP/G7m87/NUuQzc2Z75ZTI7ZOyqZLbw==}
+  mongodb@4.17.2:
+    resolution: {integrity: sha512-mLV7SEiov2LHleRJPMPrK2PMyhXFZt2UQLC4VD4pnth3jMjYKHhtqfwwkkvS/NXuo/Fp3vbhaNcXrIDaLRb9Tg==}
     engines: {node: '>=12.9.0'}
 
   mongojs@3.1.0:
@@ -3707,9 +3710,6 @@ packages:
 
   querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
-
-  queue@6.0.2:
-    resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
 
   random-bytes@1.0.0:
     resolution: {integrity: sha512-iv7LhNVO047HzYR3InF6pUcUsPQiHTM1Qal51DcGSuZFBil1aBBWG5eHPNek7bvILMaYJ/8RU1e8w1AMdHmLQQ==}
@@ -5557,6 +5557,11 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@js-sdsl/ordered-map@4.4.2':
+    optional: true
+
+  '@mongodb-js/saslprep@1.2.2':
+    dependencies:
+      sparse-bitfield: 3.0.3
     optional: true
 
   '@mysql/xdevapi@8.0.33':
@@ -7965,9 +7970,7 @@ snapshots:
 
   ieee754@1.2.1: {}
 
-  image-size@1.1.1:
-    dependencies:
-      queue: 6.0.2
+  image-size@2.0.2: {}
 
   immediate@3.0.6: {}
 
@@ -8708,14 +8711,14 @@ snapshots:
     optionalDependencies:
       saslprep: 1.0.3
 
-  mongodb@4.13.0:
+  mongodb@4.17.2:
     dependencies:
       bson: 4.7.2
       mongodb-connection-string-url: 2.6.0
       socks: 2.8.4
     optionalDependencies:
       '@aws-sdk/credential-providers': 3.817.0
-      saslprep: 1.0.3
+      '@mongodb-js/saslprep': 1.2.2
     transitivePeerDependencies:
       - aws-crt
 
@@ -9375,10 +9378,6 @@ snapshots:
   querystring@0.2.1: {}
 
   querystringify@2.2.0: {}
-
-  queue@6.0.2:
-    dependencies:
-      inherits: 2.0.4
 
   random-bytes@1.0.0: {}
 

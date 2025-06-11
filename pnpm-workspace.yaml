@@ -1,3 +1,12 @@
 onlyBuiltDependencies:
+  - bufferutil
   - core-js
+  - cpu-features
+  - es5-ext
+  - heapdump
+  - modern-syslog
+  - node-sspi
   - protobufjs
+  - sqlite3
+  - ssh2
+  - utf-8-validate
