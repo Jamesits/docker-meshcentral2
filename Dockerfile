@@ -4,7 +4,7 @@ FROM docker.io/library/node:22-bookworm-slim
 COPY --chown=0:0 rootfs_overrides/. /
 ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update -y \
-	&& apt-get install -y libcap2-bin mongodb-org-tools \
+	&& apt-get install -y libcap2-bin mongodb-org-tools build-essential python3-pip \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN setcap 'cap_net_bind_service=+ep' "$(command -v node)"
