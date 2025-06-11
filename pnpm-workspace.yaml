@@ -5,7 +5,7 @@ onlyBuiltDependencies:
   - es5-ext
   - heapdump
   - modern-syslog
-  - node-sspi
+  # - node-sspi
   - protobufjs
   - sqlite3
   - ssh2
