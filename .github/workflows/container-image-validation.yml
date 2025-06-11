@@ -12,9 +12,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: docker/setup-buildx-action@v3
       - uses: docker/build-push-action@v6
         with:
           context: .
           push: false
           cache-from: type=registry,ref=docker.io/jamesits/meshcentral2:github-actions-cache
-          cache-to: type=registry,ref=docker.io/jamesits/meshcentral2:github-actions-cache,mode=max,compression=zstd
