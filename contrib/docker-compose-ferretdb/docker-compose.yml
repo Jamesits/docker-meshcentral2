@@ -27,7 +27,7 @@ services:
       - ./deployment/postgresql:/var/lib/postgresql/data
 
   mongo:
-    image: ghcr.io/ferretdb/ferretdb:2.2.0
+    image: ghcr.io/ferretdb/ferretdb:2.3.1
     restart: "unless-stopped"
     env_file:
       - ./deployment/ferretdb.env
