@@ -19,7 +19,6 @@ services:
 
   mongo:
     image: "docker.io/library/mongo:8"
-    command: "--serviceExecutor adaptive"
     restart: "unless-stopped"
     volumes:
       - "./deployment/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d"
