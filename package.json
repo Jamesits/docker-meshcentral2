@@ -34,7 +34,7 @@
 		"ldapauth-fork": "5.0.5",
 		"loadavg-windows": "1.1.1",
 		"mariadb": "3.4.0",
-		"meshcentral": "1.1.50",
+		"meshcentral": "1.1.51",
 		"minimist": "1.2.8",
 		"minio": "8.0.2",
 		"modern-syslog": "1.2.0",
