@@ -111,8 +111,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       meshcentral:
-        specifier: 1.1.51
-        version: 1.1.51(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+        specifier: 1.1.53
+        version: 1.1.53(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       minimist:
         specifier: 1.2.8
         version: 1.2.8
@@ -711,9 +711,6 @@ packages:
 
   '@seald-io/binary-search-tree@1.0.3':
     resolution: {integrity: sha512-qv3jnwoakeax2razYaMsGI/luWdliBLHTdC6jU55hQt1hcFqzauH/HsBollQ7IR4ySTtYhT+xyHoijpA16C+tA==}
-
-  '@seald-io/nedb@4.0.4':
-    resolution: {integrity: sha512-CUNcMio7QUHTA+sIJ/DC5JzVNNsHe743TPmC4H5Gij9zDLMbmrCT2li3eVB72/gF63BPS8pWEZrjlAMRKA8FDw==}
 
   '@seald-io/nedb@4.1.2':
     resolution: {integrity: sha512-bDr6TqjBVS2rDyYM9CPxAnotj5FuNL9NF8o7h7YyFXM7yruqT4ddr+PkSb2mJvvw991bqdftazkEo38gykvaww==}
@@ -3045,8 +3042,8 @@ packages:
   merge-source-map@1.1.0:
     resolution: {integrity: sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==}
 
-  meshcentral@1.1.51:
-    resolution: {integrity: sha512-OGboHnvw45c3S3FD7C96mlEYu1x/LLlgVduU3ZivCz8q5dFAXFN7Ocpix9o/8WGxylxkNqQTvF7A4iKFWdtxvw==}
+  meshcentral@1.1.53:
+    resolution: {integrity: sha512-WiNe3kM9Oz8HA8EC8sO/4DDKn7TSV4YQqmrg/knwbN6/kyKyknnNx/DfJHTxfwG8vgfd2bnTvEWt4oS8AlQoNg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -4750,6 +4747,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.18.3:
+    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   xml-crypto@2.1.6:
     resolution: {integrity: sha512-jjvpO8vHNV8QFhW5bMypP+k4BjBqHe/HrpIwpPcdUnUTIJakSIuN96o3Sdah4tKu2z64kM/JHEH8iEHGCc6Gyw==}
     engines: {node: '>=0.4.0'}
@@ -5770,12 +5779,6 @@ snapshots:
   '@sapphire/snowflake@3.5.5': {}
 
   '@seald-io/binary-search-tree@1.0.3': {}
-
-  '@seald-io/nedb@4.0.4':
-    dependencies:
-      '@seald-io/binary-search-tree': 1.0.3
-      localforage: 1.10.0
-      util: 0.12.5
 
   '@seald-io/nedb@4.1.2':
     dependencies:
@@ -8721,9 +8724,9 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  meshcentral@1.1.51(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  meshcentral@1.1.53(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
-      '@seald-io/nedb': 4.0.4
+      '@seald-io/nedb': 4.1.2
       archiver: 7.0.1
       body-parser: 1.20.3
       cbor: 5.2.0
@@ -8736,9 +8739,10 @@ snapshots:
       minimist: 1.2.8
       multiparty: 4.2.3
       node-forge: 1.3.1
+      otplib: 12.0.1
       ua-client-hints-js: 0.1.2
       ua-parser-js: 1.0.40
-      ws: 8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ws: 8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       yauzl: 2.10.0
     transitivePeerDependencies:
       - bare-abort-controller
@@ -10751,6 +10755,11 @@ snapshots:
       utf-8-validate: 5.0.10
 
   ws@8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+    optionalDependencies:
+      bufferutil: 4.0.9
+      utf-8-validate: 5.0.10
+
+  ws@8.18.3(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     optionalDependencies:
       bufferutil: 4.0.9
       utf-8-validate: 5.0.10
