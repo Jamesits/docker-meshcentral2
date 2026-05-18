@@ -41,7 +41,7 @@
 		"modern-syslog": "1.2.0",
 		"mongodb": "4.17.2",
 		"mongojs": "3.1.0",
-		"multiparty": "4.2.3",
+		"multiparty": "4.3.0",
 		"mysql2": "3.11.4",
 		"node-forge": "1.4.0",
 		"node-pushover": "1.0.0",
