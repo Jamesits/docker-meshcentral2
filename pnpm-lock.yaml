@@ -114,8 +114,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       meshcentral:
-        specifier: 1.1.59
-        version: 1.1.59(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        specifier: 1.2.0
+        version: 1.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       minimist:
         specifier: 1.2.8
         version: 1.2.8
@@ -2955,9 +2955,9 @@ packages:
   merge-source-map@1.1.0:
     resolution: {integrity: sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==}
 
-  meshcentral@1.1.59:
-    resolution: {integrity: sha512-fmLgGy3rMmu9vDAqL7itKxWGdMgRV88uPv/c44yK+lZHsJpOjZbdMjqI94M977/rwg79Quw2JPFWzlvqXqFavw==}
-    engines: {node: '>=16.0.0'}
+  meshcentral@1.2.0:
+    resolution: {integrity: sha512-JEaXoyUGXh24P2IYl9SAyCSnyQ6WrNkY+7NX1mhKihlTfkpnvvrZxTEhnWWzoRT0zKoOt52kNUa9FTuTgfOhpw==}
+    engines: {node: '>=20.0.0'}
     hasBin: true
 
   methods@1.1.2:
@@ -8357,7 +8357,7 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  meshcentral@1.1.59(bufferutil@4.1.0)(utf-8-validate@5.0.10):
+  meshcentral@1.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     dependencies:
       '@seald-io/nedb': 4.1.2
       archiver: 7.0.1
