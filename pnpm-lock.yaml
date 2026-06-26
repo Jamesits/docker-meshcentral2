@@ -153,8 +153,8 @@ importers:
         specifier: 0.1.14
         version: 0.1.14
       nodemailer:
-        specifier: 8.0.9
-        version: 8.0.9
+        specifier: 9.0.1
+        version: 9.0.1
       openid-client:
         specifier: 5.7.1
         version: 5.7.1
@@ -3268,8 +3268,8 @@ packages:
     resolution: {integrity: sha512-2sz0i+ckeX/+22Z4KcDVis1ukyGOYZWx2WG9nQYauUwzIxEye5QcMrExkH7OaRSHkwM5bN/jesxsiQqkUb1O/w==}
     os: [win32]
 
-  nodemailer@8.0.9:
-    resolution: {integrity: sha512-5ofa7BUN8+C+Hckh5V2GjeeOGRQBx0CJQA6KxrvuZfC8iU4/q7sLn8XrtEEhJkjV6HdyIiQs7Bba6bTao8JhkA==}
+  nodemailer@9.0.1:
+    resolution: {integrity: sha512-Gwv8SQewT616ZM/URn0H54b8PWo/Wum7md3EW2aWy1lO27+WZCX+Xyak3J+NlmHUjDh5ME+uesJUDRbR3Ye8Bw==}
     engines: {node: '>=6.0.0'}
 
   nofilter@1.0.4:
@@ -8726,7 +8726,7 @@ snapshots:
       optimist: 0.6.1
       xml: 0.0.12
 
-  nodemailer@8.0.9: {}
+  nodemailer@9.0.1: {}
 
   nofilter@1.0.4: {}
 
