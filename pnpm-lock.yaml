@@ -114,8 +114,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       meshcentral:
-        specifier: 1.2.2
-        version: 1.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        specifier: 1.2.3
+        version: 1.2.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       minimist:
         specifier: 1.2.8
         version: 1.2.8
@@ -2946,8 +2946,8 @@ packages:
   merge-source-map@1.1.0:
     resolution: {integrity: sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==}
 
-  meshcentral@1.2.2:
-    resolution: {integrity: sha512-0yugD5YDU3vq52/qZ7erfy02v2yknIdHX5fMWgMGAFElYR/5b5caIrNfdpHwK5FUBGTkBCfHkHTntxyAzQ+2yQ==}
+  meshcentral@1.2.3:
+    resolution: {integrity: sha512-TuySDjIxjdhd5mF7uPHBTRJEjm3cKfe7ye8UHIF8KItSH/m742yFxapk/C7n1aFX23TD9wy5MFxTb10q8OYt/g==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -8286,7 +8286,7 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  meshcentral@1.2.2(bufferutil@4.1.0)(utf-8-validate@5.0.10):
+  meshcentral@1.2.3(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     dependencies:
       '@seald-io/nedb': 4.1.2
       '@zip.js/zip.js': 2.8.26
