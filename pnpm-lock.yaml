@@ -114,8 +114,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       meshcentral:
-        specifier: 1.2.3
-        version: 1.2.3(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        specifier: 1.2.4
+        version: 1.2.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       minimist:
         specifier: 1.2.8
         version: 1.2.8
@@ -2946,8 +2946,8 @@ packages:
   merge-source-map@1.1.0:
     resolution: {integrity: sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==}
 
-  meshcentral@1.2.3:
-    resolution: {integrity: sha512-TuySDjIxjdhd5mF7uPHBTRJEjm3cKfe7ye8UHIF8KItSH/m742yFxapk/C7n1aFX23TD9wy5MFxTb10q8OYt/g==}
+  meshcentral@1.2.4:
+    resolution: {integrity: sha512-vvUO0v6ncUQEOkw/YcGgjFrPWs3kZ/MY3BIuVlTNwKFKB3HSETxAfv23CsKO7ZnFABM0jk7FvFo8DBKC/+ZGOA==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -4684,6 +4684,18 @@ packages:
 
   ws@8.21.0:
     resolution: {integrity: sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
+  ws@8.21.1:
+    resolution: {integrity: sha512-+0NTnW77fFN/DjQi6k/Sq/Yvk4Sgajw7urW8V+asjXnRgDs9gyGkdb7EzgfhA4goXsRIZKE28fzIXBHEzhuiWw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -8286,7 +8298,7 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  meshcentral@1.2.3(bufferutil@4.1.0)(utf-8-validate@5.0.10):
+  meshcentral@1.2.4(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     dependencies:
       '@seald-io/nedb': 4.1.2
       '@zip.js/zip.js': 2.8.26
@@ -8304,7 +8316,7 @@ snapshots:
       otplib: 13.4.1
       ua-client-hints-js: 0.1.2
       ua-parser-js: 1.0.40
-      ws: 8.21.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      ws: 8.21.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       yauzl: 2.10.0
     transitivePeerDependencies:
       - bare-abort-controller
@@ -10396,6 +10408,11 @@ snapshots:
       utf-8-validate: 5.0.10
 
   ws@8.21.0(bufferutil@4.1.0)(utf-8-validate@5.0.10):
+    optionalDependencies:
+      bufferutil: 4.1.0
+      utf-8-validate: 5.0.10
+
+  ws@8.21.1(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     optionalDependencies:
       bufferutil: 4.1.0
       utf-8-validate: 5.0.10
