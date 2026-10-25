@@ -114,8 +114,8 @@ importers:
         specifier: 3.4.0
         version: 3.4.0
       meshcentral:
-        specifier: 1.3.0
-        version: 1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        specifier: 1.3.1
+        version: 1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       minimist:
         specifier: 1.2.8
         version: 1.2.8
@@ -2951,8 +2951,8 @@ packages:
   merge-source-map@1.1.0:
     resolution: {integrity: sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==}
 
-  meshcentral@1.3.0:
-    resolution: {integrity: sha512-SpEqSzLnk4hdn0hTkpXEGaWtcRULqYutCeH2zJl1VyHRiYt0i+NzZ6uYGRVkLT437vm1YnHNBVa+9W27VB2rSA==}
+  meshcentral@1.3.1:
+    resolution: {integrity: sha512-adf9wyq+78RK6HTRNlF0OO9sPs6dzDaYlScaHRqs2w8xefm/QmS/zdrwuV2UuWWiOqh1RWPxgGNVwF/qvjL0Xg==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -8310,11 +8310,10 @@ snapshots:
     dependencies:
       source-map: 0.6.1
 
-  meshcentral@1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10):
+  meshcentral@1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10):
     dependencies:
       '@seald-io/nedb': 4.1.2
       '@zip.js/zip.js': 2.8.26
-      archiver: 7.0.1
       cbor: 5.2.0
       compression: 1.8.1
       cookie-session: 2.1.1
@@ -8331,10 +8330,7 @@ snapshots:
       ws: 8.21.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       yauzl: 2.10.0
     transitivePeerDependencies:
-      - bare-abort-controller
-      - bare-buffer
       - bufferutil
-      - react-native-b4a
       - supports-color
       - utf-8-validate
 
