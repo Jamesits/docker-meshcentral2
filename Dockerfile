@@ -1,4 +1,4 @@
-FROM docker.io/library/node:24-bookworm-slim
+FROM docker.io/library/node:26-bookworm-slim
 
 # Install mongodb tools for online backup
 COPY --chown=0:0 rootfs_overrides/. /
